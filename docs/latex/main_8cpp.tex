@@ -1,0 +1,73 @@
+\doxysection{Referencia del archivo main.\+cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include "{}Sensor\+Base.\+h"{}}\newline
+{\ttfamily \#include "{}Sensor\+Temperatura.\+h"{}}\newline
+{\ttfamily \#include "{}Sensor\+Presion.\+h"{}}\newline
+{\ttfamily \#include "{}Lista\+Gestion.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+Gráfico de dependencias incluidas en main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSerialPort}{Serial\+Port}}
+\begin{DoxyCompactList}\small\item\em Clase para manejar la comunicación con el puerto serial en Linux. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e}{mostrar\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Muestra el menú principal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_a0adb1452b33597bc99cc236d89917303}{es\+Float}} (const char \texorpdfstring{$\ast$}{*}valor)
+\begin{DoxyCompactList}\small\item\em Determina el tipo de dato a partir del string. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Función principal del programa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{main_8cpp_a0adb1452b33597bc99cc236d89917303}\label{main_8cpp_a0adb1452b33597bc99cc236d89917303} 
+\index{main.cpp@{main.cpp}!esFloat@{esFloat}}
+\index{esFloat@{esFloat}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{esFloat()}{esFloat()}}
+{\footnotesize\ttfamily bool es\+Float (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{valor }\end{DoxyParamCaption})}
+
+
+
+Determina el tipo de dato a partir del string. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em valor} & String con el valor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si es float, false si es int 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función principal del programa. 
+
+\Hypertarget{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e}\label{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e} 
+\index{main.cpp@{main.cpp}!mostrarMenu@{mostrarMenu}}
+\index{mostrarMenu@{mostrarMenu}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mostrarMenu()}{mostrarMenu()}}
+{\footnotesize\ttfamily void mostrar\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Muestra el menú principal. 
+

@@ -1,0 +1,98 @@
+\doxysection{Lista\+Gestion.\+h}
+\hypertarget{ListaGestion_8h_source}{}\label{ListaGestion_8h_source}\mbox{\hyperlink{ListaGestion_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ LISTAGESTION\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ LISTAGESTION\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{SensorBase_8h}{SensorBase.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classListaGestion}{ListaGestion}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{struct\ }NodoSensor\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSensorBase}{SensorBase}}*\ sensor;\ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ NodoSensor*\ siguiente;\ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ NodoSensor(\mbox{\hyperlink{classSensorBase}{SensorBase}}*\ s)\ :\ sensor(s),\ siguiente(\textcolor{keyword}{nullptr})\ \{\}}
+\DoxyCodeLine{00036\ \ \ \ \ \};}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ NodoSensor*\ cabeza;\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ tamanio;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{classListaGestion_aceaec0bbb46bd0711387802d44e2dbee}{ListaGestion}}()\ :\ cabeza(nullptr),\ tamanio(0)\ \{\}}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classListaGestion_a4b123bfc1cb872963fc3aac4ee797c1f}{\string~ListaGestion}}()\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/\ Liberación\ de\ Memoria\ en\ Cascada\ -\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (cabeza\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ NodoSensor*\ temp\ =\ cabeza;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ cabeza\ =\ cabeza-\/>siguiente;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Liberando\ Nodo:\ "{}}\ <<\ temp-\/>sensor-\/>getNombre()\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp-\/>sensor;\ \textcolor{comment}{//\ Llama\ al\ destructor\ virtual}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Sistema\ cerrado.\ Memoria\ limpia."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListaGestion_a84c3d61387b9a11ef84f5c876de7b5e8}{insertar}}(\mbox{\hyperlink{classSensorBase}{SensorBase}}*\ sensor)\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ NodoSensor*\ nuevo\ =\ \textcolor{keyword}{new}\ NodoSensor(sensor);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cabeza\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ cabeza\ =\ nuevo;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ NodoSensor*\ actual\ =\ cabeza;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (actual-\/>siguiente\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ actual\ =\ actual-\/>siguiente;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ actual-\/>siguiente\ =\ nuevo;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ tamanio++;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Sensor\ '"{}}\ <<\ sensor-\/>\mbox{\hyperlink{classSensorBase_ae96d193c623231a955756bceac482f9c}{getNombre}}()\ <<\ \textcolor{stringliteral}{"{}'\ insertado\ en\ la\ lista\ de\ gestión."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{classSensorBase}{SensorBase}}*\ \mbox{\hyperlink{classListaGestion_a7d067b6d3ca4eb04f5ace7449868a351}{buscar}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ nombre)\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ NodoSensor*\ actual\ =\ cabeza;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (actual\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(actual-\/>sensor-\/>getNombre(),\ nombre)\ ==\ 0)\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ actual-\/>sensor;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ actual\ =\ actual-\/>siguiente;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListaGestion_a356ddce9e9524fe0a52412763a130a87}{procesarTodos}}()\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/\ Ejecutando\ Polimorfismo\ -\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ NodoSensor*\ actual\ =\ cabeza;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (actual\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ actual-\/>sensor-\/>procesarLectura();}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ actual\ =\ actual-\/>siguiente;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListaGestion_a67ca9f4dab44e9d1fd5698ab85768a7f}{imprimirTodos}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/\ Información\ de\ Sensores\ Registrados\ -\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ NodoSensor*\ actual\ =\ cabeza;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ contador\ =\ 1;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (actual\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nSensor\ \#"{}}\ <<\ contador\ <<\ \textcolor{stringliteral}{"{}:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ actual-\/>sensor-\/>imprimirInfo();}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ actual\ =\ actual-\/>siguiente;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ contador++;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classListaGestion_a13223a70420f8d30e0b00f801c55b683}{getTamanio}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tamanio;}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classListaGestion_a44683d8dd51c4728f92f832288ca2b16}{estaVacia}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cabeza\ ==\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LISTAGESTION\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema IoT de Monitoreo: Referencia de la clase ListaGestion</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Sistema IoT de Monitoreo
+   </div>
+   <div id="projectbrief">Gestión polimórfica de sensores con listas genéricas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Clases</a> &#124;
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="classListaGestion-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la clase ListaGestion</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Lista enlazada simple para almacenar punteros a <a class="el" href="classSensorBase.html" title="Clase abstracta que define la interfaz común para todos los sensores.">SensorBase</a>.  
+ <a href="classListaGestion.html#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ListaGestion_8h_source.html">ListaGestion.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:aceaec0bbb46bd0711387802d44e2dbee" id="r_aceaec0bbb46bd0711387802d44e2dbee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListaGestion.html#aceaec0bbb46bd0711387802d44e2dbee">ListaGestion</a> ()</td></tr>
+<tr class="memdesc:aceaec0bbb46bd0711387802d44e2dbee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto.  <br /></td></tr>
+<tr class="separator:aceaec0bbb46bd0711387802d44e2dbee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b123bfc1cb872963fc3aac4ee797c1f" id="r_a4b123bfc1cb872963fc3aac4ee797c1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListaGestion.html#a4b123bfc1cb872963fc3aac4ee797c1f">~ListaGestion</a> ()</td></tr>
+<tr class="memdesc:a4b123bfc1cb872963fc3aac4ee797c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor - Libera todos los sensores y nodos.  <br /></td></tr>
+<tr class="separator:a4b123bfc1cb872963fc3aac4ee797c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c3d61387b9a11ef84f5c876de7b5e8" id="r_a84c3d61387b9a11ef84f5c876de7b5e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListaGestion.html#a84c3d61387b9a11ef84f5c876de7b5e8">insertar</a> (<a class="el" href="classSensorBase.html">SensorBase</a> *sensor)</td></tr>
+<tr class="memdesc:a84c3d61387b9a11ef84f5c876de7b5e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserta un sensor al final de la lista.  <br /></td></tr>
+<tr class="separator:a84c3d61387b9a11ef84f5c876de7b5e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d067b6d3ca4eb04f5ace7449868a351" id="r_a7d067b6d3ca4eb04f5ace7449868a351"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSensorBase.html">SensorBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListaGestion.html#a7d067b6d3ca4eb04f5ace7449868a351">buscar</a> (const char *nombre)</td></tr>
+<tr class="memdesc:a7d067b6d3ca4eb04f5ace7449868a351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Busca un sensor por su nombre.  <br /></td></tr>
+<tr class="separator:a7d067b6d3ca4eb04f5ace7449868a351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356ddce9e9524fe0a52412763a130a87" id="r_a356ddce9e9524fe0a52412763a130a87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListaGestion.html#a356ddce9e9524fe0a52412763a130a87">procesarTodos</a> ()</td></tr>
+<tr class="memdesc:a356ddce9e9524fe0a52412763a130a87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procesa todos los sensores de forma polimórfica.  <br /></td></tr>
+<tr class="separator:a356ddce9e9524fe0a52412763a130a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ca9f4dab44e9d1fd5698ab85768a7f" id="r_a67ca9f4dab44e9d1fd5698ab85768a7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListaGestion.html#a67ca9f4dab44e9d1fd5698ab85768a7f">imprimirTodos</a> () const</td></tr>
+<tr class="memdesc:a67ca9f4dab44e9d1fd5698ab85768a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime información de todos los sensores.  <br /></td></tr>
+<tr class="separator:a67ca9f4dab44e9d1fd5698ab85768a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13223a70420f8d30e0b00f801c55b683" id="r_a13223a70420f8d30e0b00f801c55b683"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListaGestion.html#a13223a70420f8d30e0b00f801c55b683">getTamanio</a> () const</td></tr>
+<tr class="memdesc:a13223a70420f8d30e0b00f801c55b683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el tamaño de la lista.  <br /></td></tr>
+<tr class="separator:a13223a70420f8d30e0b00f801c55b683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44683d8dd51c4728f92f832288ca2b16" id="r_a44683d8dd51c4728f92f832288ca2b16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListaGestion.html#a44683d8dd51c4728f92f832288ca2b16">estaVacia</a> () const</td></tr>
+<tr class="memdesc:a44683d8dd51c4728f92f832288ca2b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si la lista está vacía.  <br /></td></tr>
+<tr class="separator:a44683d8dd51c4728f92f832288ca2b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Lista enlazada simple para almacenar punteros a <a class="el" href="classSensorBase.html" title="Clase abstracta que define la interfaz común para todos los sensores.">SensorBase</a>. </p>
+<p>Permite gestionar de forma polimórfica diferentes tipos de sensores (<a class="el" href="classSensorTemperatura.html" title="Clase derivada que maneja lecturas de temperatura en punto flotante.">SensorTemperatura</a>, <a class="el" href="classSensorPresion.html" title="Clase derivada que maneja lecturas de presión en enteros.">SensorPresion</a>) a través de punteros a la clase base. </p>
+</div><h2 class="groupheader">Documentación de constructores y destructores</h2>
+<a id="aceaec0bbb46bd0711387802d44e2dbee" name="aceaec0bbb46bd0711387802d44e2dbee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceaec0bbb46bd0711387802d44e2dbee">&#9670;&#160;</a></span>ListaGestion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ListaGestion::ListaGestion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor por defecto. </p>
+
+</div>
+</div>
+<a id="a4b123bfc1cb872963fc3aac4ee797c1f" name="a4b123bfc1cb872963fc3aac4ee797c1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b123bfc1cb872963fc3aac4ee797c1f">&#9670;&#160;</a></span>~ListaGestion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ListaGestion::~ListaGestion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor - Libera todos los sensores y nodos. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones miembro</h2>
+<a id="a7d067b6d3ca4eb04f5ace7449868a351" name="a7d067b6d3ca4eb04f5ace7449868a351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d067b6d3ca4eb04f5ace7449868a351">&#9670;&#160;</a></span>buscar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSensorBase.html">SensorBase</a> * ListaGestion::buscar </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>nombre</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Busca un sensor por su nombre. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombre</td><td>Nombre del sensor a buscar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Puntero al sensor o nullptr si no existe </dd></dl>
+
+</div>
+</div>
+<a id="a44683d8dd51c4728f92f832288ca2b16" name="a44683d8dd51c4728f92f832288ca2b16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44683d8dd51c4728f92f832288ca2b16">&#9670;&#160;</a></span>estaVacia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ListaGestion::estaVacia </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verifica si la lista está vacía. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si está vacía </dd></dl>
+
+</div>
+</div>
+<a id="a13223a70420f8d30e0b00f801c55b683" name="a13223a70420f8d30e0b00f801c55b683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13223a70420f8d30e0b00f801c55b683">&#9670;&#160;</a></span>getTamanio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ListaGestion::getTamanio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtiene el tamaño de la lista. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Número de sensores </dd></dl>
+
+</div>
+</div>
+<a id="a67ca9f4dab44e9d1fd5698ab85768a7f" name="a67ca9f4dab44e9d1fd5698ab85768a7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ca9f4dab44e9d1fd5698ab85768a7f">&#9670;&#160;</a></span>imprimirTodos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ListaGestion::imprimirTodos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Imprime información de todos los sensores. </p>
+
+</div>
+</div>
+<a id="a84c3d61387b9a11ef84f5c876de7b5e8" name="a84c3d61387b9a11ef84f5c876de7b5e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84c3d61387b9a11ef84f5c876de7b5e8">&#9670;&#160;</a></span>insertar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ListaGestion::insertar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSensorBase.html">SensorBase</a> *&#160;</td>
+          <td class="paramname"><em>sensor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inserta un sensor al final de la lista. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sensor</td><td>Puntero al sensor a insertar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a356ddce9e9524fe0a52412763a130a87" name="a356ddce9e9524fe0a52412763a130a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a356ddce9e9524fe0a52412763a130a87">&#9670;&#160;</a></span>procesarTodos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ListaGestion::procesarTodos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Procesa todos los sensores de forma polimórfica. </p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li><a class="el" href="ListaGestion_8h_source.html">ListaGestion.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

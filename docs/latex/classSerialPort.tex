@@ -1,0 +1,90 @@
+\doxysection{Referencia de la clase Serial\+Port}
+\hypertarget{classSerialPort}{}\label{classSerialPort}\index{SerialPort@{SerialPort}}
+
+
+Clase para manejar la comunicación con el puerto serial en Linux.  
+
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSerialPort_a4cf2a1bf67c66f0bb30f2476e010886e}{Serial\+Port}} (const char \texorpdfstring{$\ast$}{*}puerto)
+\begin{DoxyCompactList}\small\item\em Constructor -\/ Inicializa el puerto serial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSerialPort_a8e09f366ed9b26b0456b66ae7bd8c702}{\texorpdfstring{$\sim$}{\string~}\+Serial\+Port}} ()
+\begin{DoxyCompactList}\small\item\em Destructor -\/ Cierra el puerto serial. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSerialPort_a24e723d419d1203ce8ace23fc0168f8d}{leer\+Linea}} (char \texorpdfstring{$\ast$}{*}buffer, int max\+Len)
+\begin{DoxyCompactList}\small\item\em Lee una línea del puerto serial. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSerialPort_a6d6e9bd63e0a683bb486c51e2cfe8f1a}{esta\+Conectado}} () const
+\begin{DoxyCompactList}\small\item\em Verifica si está conectado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase para manejar la comunicación con el puerto serial en Linux. 
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classSerialPort_a4cf2a1bf67c66f0bb30f2476e010886e}\label{classSerialPort_a4cf2a1bf67c66f0bb30f2476e010886e} 
+\index{SerialPort@{SerialPort}!SerialPort@{SerialPort}}
+\index{SerialPort@{SerialPort}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{SerialPort()}{SerialPort()}}
+{\footnotesize\ttfamily Serial\+Port\+::\+Serial\+Port (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{puerto }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor -\/ Inicializa el puerto serial. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em puerto} & Nombre del puerto (ej\+: "{}/dev/tty\+ACM0"{} o "{}/dev/tty\+USB0"{}) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSerialPort_a8e09f366ed9b26b0456b66ae7bd8c702}\label{classSerialPort_a8e09f366ed9b26b0456b66ae7bd8c702} 
+\index{SerialPort@{SerialPort}!````~SerialPort@{\texorpdfstring{$\sim$}{\string~}SerialPort}}
+\index{````~SerialPort@{\texorpdfstring{$\sim$}{\string~}SerialPort}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SerialPort()}{\string~SerialPort()}}
+{\footnotesize\ttfamily Serial\+Port\+::\texorpdfstring{$\sim$}{\string~}\+Serial\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor -\/ Cierra el puerto serial. 
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classSerialPort_a6d6e9bd63e0a683bb486c51e2cfe8f1a}\label{classSerialPort_a6d6e9bd63e0a683bb486c51e2cfe8f1a} 
+\index{SerialPort@{SerialPort}!estaConectado@{estaConectado}}
+\index{estaConectado@{estaConectado}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{estaConectado()}{estaConectado()}}
+{\footnotesize\ttfamily bool Serial\+Port\+::esta\+Conectado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si está conectado. 
+
+\begin{DoxyReturn}{Devuelve}
+true si está conectado 
+\end{DoxyReturn}
+\Hypertarget{classSerialPort_a24e723d419d1203ce8ace23fc0168f8d}\label{classSerialPort_a24e723d419d1203ce8ace23fc0168f8d} 
+\index{SerialPort@{SerialPort}!leerLinea@{leerLinea}}
+\index{leerLinea@{leerLinea}!SerialPort@{SerialPort}}
+\doxysubsubsection{\texorpdfstring{leerLinea()}{leerLinea()}}
+{\footnotesize\ttfamily bool Serial\+Port\+::leer\+Linea (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{int}]{max\+Len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lee una línea del puerto serial. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em buffer} & Buffer donde almacenar los datos \\
+\hline
+{\em max\+Len} & Tamaño máximo del buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se leyó correctamente 
+\end{DoxyReturn}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

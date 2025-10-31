@@ -1,0 +1,5 @@
+<map id="SensorTemperatura.h" name="SensorTemperatura.h">
+<area shape="rect" id="Node000001" title="Sensor especializado para lecturas de temperatura (float)" alt="" coords="5,5,152,31"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html" title=" " alt="" coords="41,79,116,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,44,81,79,76,79,76,44"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Gráfico de jerarquía de clases" name="Gráfico de jerarquía de clases">
+<area shape="rect" id="Node000000" href="$classSensorBase.html" title="Clase abstracta que define la interfaz común para todos los sensores." alt="" coords="5,31,99,56"/>
+<area shape="rect" id="Node000001" href="$classSensorPresion.html" title="Clase derivada que maneja lecturas de presión en enteros." alt="" coords="161,5,267,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="112,31,160,24,161,29,113,37"/>
+<area shape="rect" id="Node000002" href="$classSensorTemperatura.html" title="Clase derivada que maneja lecturas de temperatura en punto flotante." alt="" coords="147,55,281,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="113,50,147,55,146,60,112,55"/>
+</map>

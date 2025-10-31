@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema IoT de Monitoreo: Archivo de código fuente SensorTemperatura.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Sistema IoT de Monitoreo
+   </div>
+   <div id="projectbrief">Gestión polimórfica de sensores con listas genéricas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SensorTemperatura.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="SensorTemperatura_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef SENSORTEMPERATURA_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define SENSORTEMPERATURA_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="SensorBase_8h.html">SensorBase.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="ListaSensor_8h.html">ListaSensor.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classSensorTemperatura.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="classSensorTemperatura.html">SensorTemperatura</a> : <span class="keyword">public</span> <a class="code hl_class" href="classSensorBase.html">SensorBase</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_class" href="classListaSensor.html">ListaSensor&lt;float&gt;</a> historial; </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classSensorTemperatura.html#a1a54daeb8cc64224ab6bbb28f177670f">   33</a></span>    <a class="code hl_function" href="classSensorTemperatura.html#a1a54daeb8cc64224ab6bbb28f177670f">SensorTemperatura</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* nom) : <a class="code hl_class" href="classSensorBase.html">SensorBase</a>(nom) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Sensor de Temperatura &#39;&quot;</span> &lt;&lt; <a class="code hl_variable" href="classSensorBase.html#a843ba88809ed7b78942a0a4b1c484cf5">nombre</a> &lt;&lt; <span class="stringliteral">&quot;&#39; creado.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classSensorTemperatura.html#aaeb0f7948069eb57dc05170414c47b12">   40</a></span>    <a class="code hl_function" href="classSensorTemperatura.html#aaeb0f7948069eb57dc05170414c47b12">~SensorTemperatura</a>() {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;  [Destructor Sensor &quot;</span> &lt;&lt; <a class="code hl_variable" href="classSensorBase.html#a843ba88809ed7b78942a0a4b1c484cf5">nombre</a> &lt;&lt; <span class="stringliteral">&quot;] Liberando Lista Interna...&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classSensorTemperatura.html#aee3fe454fb7aa0183f2b26e7c2b8dffa">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classSensorTemperatura.html#aee3fe454fb7aa0183f2b26e7c2b8dffa">agregarLectura</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* valor)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">float</span> temp = atof(valor);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        historial.<a class="code hl_function" href="classListaSensor.html#addc18bbdb7f6a09824a9afb7935ec0d6">insertar</a>(temp);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;ID: &quot;</span> &lt;&lt; <a class="code hl_variable" href="classSensorBase.html#a843ba88809ed7b78942a0a4b1c484cf5">nombre</a> &lt;&lt; <span class="stringliteral">&quot;. Valor: &quot;</span> &lt;&lt; temp &lt;&lt; <span class="stringliteral">&quot; (float)&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classSensorTemperatura.html#a36227dc500c6f8be7866cb0f396894b3">   60</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classSensorTemperatura.html#a36227dc500c6f8be7866cb0f396894b3">procesarLectura</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;-&gt; Procesando Sensor &quot;</span> &lt;&lt; <a class="code hl_variable" href="classSensorBase.html#a843ba88809ed7b78942a0a4b1c484cf5">nombre</a> &lt;&lt; <span class="stringliteral">&quot;...&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">if</span> (historial.<a class="code hl_function" href="classListaSensor.html#a2dd75ef08cf9a41dc12886b45aa0571e">estaVacia</a>()) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;No hay lecturas para procesar.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> (historial.<a class="code hl_function" href="classListaSensor.html#a29e6162d86aaaa5a580cb95390b58ea3">getTamanio</a>() &gt; 1) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordtype">float</span> minimo = historial.<a class="code hl_function" href="classListaSensor.html#a6eb996057c9c1feabb5ac94a4fb4c69b">eliminarMinimo</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordtype">float</span> promedio = historial.<a class="code hl_function" href="classListaSensor.html#a9cd368481187ad8a4faf79db7810086b">calcularPromedio</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; <a class="code hl_variable" href="classSensorBase.html#a843ba88809ed7b78942a0a4b1c484cf5">nombre</a> &lt;&lt; <span class="stringliteral">&quot;] (Temperatura): Lectura más baja (&quot;</span>&lt;&lt; minimo &lt;&lt; <span class="stringliteral">&quot;) eliminada. Promedio restante: &quot;</span> &lt;&lt; promedio &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordtype">float</span> promedio = historial.<a class="code hl_function" href="classListaSensor.html#a9cd368481187ad8a4faf79db7810086b">calcularPromedio</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Promedio calculado sobre 1 lectura (&quot;</span> &lt;&lt; promedio &lt;&lt; <span class="stringliteral">&quot;).&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    </div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classSensorTemperatura.html#a95a263967c5f9a55da09be3b11c27c86">   81</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classSensorTemperatura.html#a95a263967c5f9a55da09be3b11c27c86">imprimirInfo</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;  Sensor: &quot;</span> &lt;&lt; <a class="code hl_variable" href="classSensorBase.html#a843ba88809ed7b78942a0a4b1c484cf5">nombre</a> &lt;&lt; <span class="stringliteral">&quot; (Temperatura - FLOAT)&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;  Lecturas almacenadas: &quot;</span> &lt;&lt; historial.<a class="code hl_function" href="classListaSensor.html#a29e6162d86aaaa5a580cb95390b58ea3">getTamanio</a>() &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        historial.<a class="code hl_function" href="classListaSensor.html#a11f84bbbda6299d28a3018eefeeb5a02">imprimir</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif </span><span class="comment">// SENSORTEMPERATURA_H</span></div>
+<div class="ttc" id="aListaSensor_8h_html"><div class="ttname"><a href="ListaSensor_8h.html">ListaSensor.h</a></div><div class="ttdoc">Implementación de Lista Enlazada Simple Genérica para sensores.</div></div>
+<div class="ttc" id="aSensorBase_8h_html"><div class="ttname"><a href="SensorBase_8h.html">SensorBase.h</a></div><div class="ttdoc">Clase base abstracta para todos los sensores del sistema IoT.</div></div>
+<div class="ttc" id="aclassListaSensor_html"><div class="ttname"><a href="classListaSensor.html">ListaSensor</a></div><div class="ttdoc">Lista enlazada simple genérica para almacenar lecturas de sensores.</div><div class="ttdef"><b>Definition</b> ListaSensor.h:22</div></div>
+<div class="ttc" id="aclassListaSensor_html_a11f84bbbda6299d28a3018eefeeb5a02"><div class="ttname"><a href="classListaSensor.html#a11f84bbbda6299d28a3018eefeeb5a02">ListaSensor::imprimir</a></div><div class="ttdeci">void imprimir() const</div><div class="ttdoc">Imprime todos los elementos de la lista.</div><div class="ttdef"><b>Definition</b> ListaSensor.h:170</div></div>
+<div class="ttc" id="aclassListaSensor_html_a29e6162d86aaaa5a580cb95390b58ea3"><div class="ttname"><a href="classListaSensor.html#a29e6162d86aaaa5a580cb95390b58ea3">ListaSensor::getTamanio</a></div><div class="ttdeci">int getTamanio() const</div><div class="ttdoc">Obtiene el tamaño actual de la lista.</div><div class="ttdef"><b>Definition</b> ListaSensor.h:155</div></div>
+<div class="ttc" id="aclassListaSensor_html_a2dd75ef08cf9a41dc12886b45aa0571e"><div class="ttname"><a href="classListaSensor.html#a2dd75ef08cf9a41dc12886b45aa0571e">ListaSensor::estaVacia</a></div><div class="ttdeci">bool estaVacia() const</div><div class="ttdoc">Verifica si la lista está vacía.</div><div class="ttdef"><b>Definition</b> ListaSensor.h:163</div></div>
+<div class="ttc" id="aclassListaSensor_html_a6eb996057c9c1feabb5ac94a4fb4c69b"><div class="ttname"><a href="classListaSensor.html#a6eb996057c9c1feabb5ac94a4fb4c69b">ListaSensor::eliminarMinimo</a></div><div class="ttdeci">T eliminarMinimo()</div><div class="ttdoc">Encuentra y elimina el valor mínimo de la lista.</div><div class="ttdef"><b>Definition</b> ListaSensor.h:117</div></div>
+<div class="ttc" id="aclassListaSensor_html_a9cd368481187ad8a4faf79db7810086b"><div class="ttname"><a href="classListaSensor.html#a9cd368481187ad8a4faf79db7810086b">ListaSensor::calcularPromedio</a></div><div class="ttdeci">T calcularPromedio() const</div><div class="ttdoc">Calcula el promedio de los elementos.</div><div class="ttdef"><b>Definition</b> ListaSensor.h:101</div></div>
+<div class="ttc" id="aclassListaSensor_html_addc18bbdb7f6a09824a9afb7935ec0d6"><div class="ttname"><a href="classListaSensor.html#addc18bbdb7f6a09824a9afb7935ec0d6">ListaSensor::insertar</a></div><div class="ttdeci">void insertar(T valor)</div><div class="ttdoc">Inserta un elemento al final de la lista.</div><div class="ttdef"><b>Definition</b> ListaSensor.h:81</div></div>
+<div class="ttc" id="aclassSensorBase_html"><div class="ttname"><a href="classSensorBase.html">SensorBase</a></div><div class="ttdoc">Clase abstracta que define la interfaz común para todos los sensores.</div><div class="ttdef"><b>Definition</b> SensorBase.h:21</div></div>
+<div class="ttc" id="aclassSensorBase_html_a843ba88809ed7b78942a0a4b1c484cf5"><div class="ttname"><a href="classSensorBase.html#a843ba88809ed7b78942a0a4b1c484cf5">SensorBase::nombre</a></div><div class="ttdeci">char nombre[50]</div><div class="ttdoc">Identificador único del sensor.</div><div class="ttdef"><b>Definition</b> SensorBase.h:23</div></div>
+<div class="ttc" id="aclassSensorTemperatura_html"><div class="ttname"><a href="classSensorTemperatura.html">SensorTemperatura</a></div><div class="ttdoc">Clase derivada que maneja lecturas de temperatura en punto flotante.</div><div class="ttdef"><b>Definition</b> SensorTemperatura.h:24</div></div>
+<div class="ttc" id="aclassSensorTemperatura_html_a1a54daeb8cc64224ab6bbb28f177670f"><div class="ttname"><a href="classSensorTemperatura.html#a1a54daeb8cc64224ab6bbb28f177670f">SensorTemperatura::SensorTemperatura</a></div><div class="ttdeci">SensorTemperatura(const char *nom)</div><div class="ttdoc">Constructor del sensor de temperatura.</div><div class="ttdef"><b>Definition</b> SensorTemperatura.h:33</div></div>
+<div class="ttc" id="aclassSensorTemperatura_html_a36227dc500c6f8be7866cb0f396894b3"><div class="ttname"><a href="classSensorTemperatura.html#a36227dc500c6f8be7866cb0f396894b3">SensorTemperatura::procesarLectura</a></div><div class="ttdeci">void procesarLectura() override</div><div class="ttdoc">Procesa las lecturas: elimina el mínimo y calcula promedio.</div><div class="ttdef"><b>Definition</b> SensorTemperatura.h:60</div></div>
+<div class="ttc" id="aclassSensorTemperatura_html_a95a263967c5f9a55da09be3b11c27c86"><div class="ttname"><a href="classSensorTemperatura.html#a95a263967c5f9a55da09be3b11c27c86">SensorTemperatura::imprimirInfo</a></div><div class="ttdeci">void imprimirInfo() const override</div><div class="ttdoc">Imprime información del sensor y sus lecturas.</div><div class="ttdef"><b>Definition</b> SensorTemperatura.h:81</div></div>
+<div class="ttc" id="aclassSensorTemperatura_html_aaeb0f7948069eb57dc05170414c47b12"><div class="ttname"><a href="classSensorTemperatura.html#aaeb0f7948069eb57dc05170414c47b12">SensorTemperatura::~SensorTemperatura</a></div><div class="ttdeci">~SensorTemperatura()</div><div class="ttdoc">Destructor que libera la lista interna.</div><div class="ttdef"><b>Definition</b> SensorTemperatura.h:40</div></div>
+<div class="ttc" id="aclassSensorTemperatura_html_aee3fe454fb7aa0183f2b26e7c2b8dffa"><div class="ttname"><a href="classSensorTemperatura.html#aee3fe454fb7aa0183f2b26e7c2b8dffa">SensorTemperatura::agregarLectura</a></div><div class="ttdeci">void agregarLectura(const char *valor) override</div><div class="ttdoc">Agrega una lectura de temperatura a la lista.</div><div class="ttdef"><b>Definition</b> SensorTemperatura.h:48</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,59 @@
+\doxysection{Sensor\+Temperatura.\+h}
+\hypertarget{SensorTemperatura_8h_source}{}\label{SensorTemperatura_8h_source}\mbox{\hyperlink{SensorTemperatura_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SENSORTEMPERATURA\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SENSORTEMPERATURA\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{SensorBase_8h}{SensorBase.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ListaSensor_8h}{ListaSensor.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSensorTemperatura}{SensorTemperatura}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSensorBase}{SensorBase}}\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classListaSensor}{ListaSensor<float>}}\ historial;\ }
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classSensorTemperatura_a1a54daeb8cc64224ab6bbb28f177670f}{SensorTemperatura}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ nom)\ :\ \mbox{\hyperlink{classSensorBase}{SensorBase}}(nom)\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Sensor\ de\ Temperatura\ '"{}}\ <<\ \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}}\ <<\ \textcolor{stringliteral}{"{}'\ creado."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classSensorTemperatura_aaeb0f7948069eb57dc05170414c47b12}{\string~SensorTemperatura}}()\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ [Destructor\ Sensor\ "{}}\ <<\ \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}}\ <<\ \textcolor{stringliteral}{"{}]\ Liberando\ Lista\ Interna..."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorTemperatura_aee3fe454fb7aa0183f2b26e7c2b8dffa}{agregarLectura}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ valor)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ temp\ =\ atof(valor);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ historial.\mbox{\hyperlink{classListaSensor_addc18bbdb7f6a09824a9afb7935ec0d6}{insertar}}(temp);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}ID:\ "{}}\ <<\ \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}}\ <<\ \textcolor{stringliteral}{"{}.\ Valor:\ "{}}\ <<\ temp\ <<\ \textcolor{stringliteral}{"{}\ (float)"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorTemperatura_a36227dc500c6f8be7866cb0f396894b3}{procesarLectura}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/>\ Procesando\ Sensor\ "{}}\ <<\ \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}}\ <<\ \textcolor{stringliteral}{"{}..."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (historial.\mbox{\hyperlink{classListaSensor_a2dd75ef08cf9a41dc12886b45aa0571e}{estaVacia}}())\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}No\ hay\ lecturas\ para\ procesar."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (historial.\mbox{\hyperlink{classListaSensor_a29e6162d86aaaa5a580cb95390b58ea3}{getTamanio}}()\ >\ 1)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ minimo\ =\ historial.\mbox{\hyperlink{classListaSensor_a6eb996057c9c1feabb5ac94a4fb4c69b}{eliminarMinimo}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ promedio\ =\ historial.\mbox{\hyperlink{classListaSensor_a9cd368481187ad8a4faf79db7810086b}{calcularPromedio}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}["{}}\ <<\ \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}}\ <<\ \textcolor{stringliteral}{"{}]\ (Temperatura):\ Lectura\ más\ baja\ ("{}}<<\ minimo\ <<\ \textcolor{stringliteral}{"{})\ eliminada.\ Promedio\ restante:\ "{}}\ <<\ promedio\ <<\ \textcolor{stringliteral}{"{}."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ promedio\ =\ historial.\mbox{\hyperlink{classListaSensor_a9cd368481187ad8a4faf79db7810086b}{calcularPromedio}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Promedio\ calculado\ sobre\ 1\ lectura\ ("{}}\ <<\ promedio\ <<\ \textcolor{stringliteral}{"{})."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorTemperatura_a95a263967c5f9a55da09be3b11c27c86}{imprimirInfo}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ Sensor:\ "{}}\ <<\ \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}}\ <<\ \textcolor{stringliteral}{"{}\ (Temperatura\ -\/\ FLOAT)"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ Lecturas\ almacenadas:\ "{}}\ <<\ historial.\mbox{\hyperlink{classListaSensor_a29e6162d86aaaa5a580cb95390b58ea3}{getTamanio}}()\ <<\ std::endl;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ historial.\mbox{\hyperlink{classListaSensor_a11f84bbbda6299d28a3018eefeeb5a02}{imprimir}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SENSORTEMPERATURA\_H}}
+
+\end{DoxyCode}

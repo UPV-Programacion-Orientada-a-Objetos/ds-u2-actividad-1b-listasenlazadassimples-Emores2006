@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema IoT de Monitoreo: Referencia del archivo main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Sistema IoT de Monitoreo
+   </div>
+   <div id="projectbrief">Gestión polimórfica de sensores con listas genéricas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Clases</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo main.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="SensorBase_8h_source.html">SensorBase.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SensorTemperatura_8h_source.html">SensorTemperatura.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SensorPresion_8h_source.html">SensorPresion.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ListaGestion_8h_source.html">ListaGestion.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;termios.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependencias incluidas en main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#amain_8cpp" alt=""/></div>
+<map name="amain_8cpp" id="amain_8cpp">
+<area shape="rect" title=" " alt="" coords="393,5,467,31"/>
+<area shape="rect" href="SensorBase_8h.html" title="Clase base abstracta para todos los sensores del sistema IoT." alt="" coords="87,152,191,177"/>
+<area shape="poly" title=" " alt="" coords="393,24,351,29,302,39,251,56,204,81,174,109,153,141,149,138,170,106,201,77,249,51,301,34,350,24,392,19"/>
+<area shape="rect" title=" " alt="" coords="37,225,98,251"/>
+<area shape="poly" title=" " alt="" coords="392,21,302,23,190,30,135,38,86,48,47,62,21,80,12,95,9,112,15,148,31,183,51,213,47,216,27,186,9,150,3,112,7,93,17,77,44,58,84,43,134,33,189,25,302,18,392,16"/>
+<area shape="rect" href="SensorTemperatura_8h.html" title="Sensor especializado para lecturas de temperatura (float)" alt="" coords="357,79,503,104"/>
+<area shape="poly" title=" " alt="" coords="433,31,433,65,427,65,427,31"/>
+<area shape="rect" title=" " alt="" coords="366,225,438,251"/>
+<area shape="poly" title=" " alt="" coords="461,29,492,48,506,61,518,78,521,91,518,105,508,144,487,179,463,202,438,220,435,216,460,198,483,176,503,142,513,103,516,91,513,80,502,65,489,52,458,33"/>
+<area shape="rect" href="SensorPresion_8h.html" title="Sensor especializado para lecturas de presión (int)" alt="" coords="213,79,332,104"/>
+<area shape="poly" title=" " alt="" coords="406,33,312,75,310,71,404,28"/>
+<area shape="rect" href="ListaGestion_8h.html" title="Lista enlazada NO genérica para gestión polimórfica de sensores." alt="" coords="31,79,138,104"/>
+<area shape="poly" title=" " alt="" coords="393,30,152,79,151,74,392,24"/>
+<area shape="rect" title=" " alt="" coords="578,79,637,104"/>
+<area shape="poly" title=" " alt="" coords="460,28,567,71,565,76,458,33"/>
+<area shape="rect" title=" " alt="" coords="661,79,729,104"/>
+<area shape="poly" title=" " alt="" coords="468,27,649,75,647,80,467,32"/>
+<area shape="rect" title=" " alt="" coords="753,79,829,104"/>
+<area shape="poly" title=" " alt="" coords="468,23,740,76,739,81,467,29"/>
+<area shape="poly" title=" " alt="" coords="129,180,91,218,87,214,126,176"/>
+<area shape="poly" title=" " alt="" coords="384,107,200,151,199,146,383,101"/>
+<area shape="rect" href="ListaSensor_8h.html" title="Implementación de Lista Enlazada Simple Genérica para sensores." alt="" coords="351,152,453,177"/>
+<area shape="poly" title=" " alt="" coords="428,105,414,140,409,138,423,103"/>
+<area shape="poly" title=" " alt="" coords="443,103,465,136,470,157,467,178,452,201,433,219,430,215,448,198,462,176,465,157,460,138,439,106"/>
+<area shape="rect" title=" " alt="" coords="267,152,327,177"/>
+<area shape="poly" title=" " alt="" coords="410,106,332,148,329,143,407,102"/>
+<area shape="poly" title=" " alt="" coords="405,178,405,212,399,212,399,178"/>
+<area shape="poly" title=" " alt="" coords="253,106,175,148,172,143,250,102"/>
+<area shape="poly" title=" " alt="" coords="295,102,370,143,367,147,292,106"/>
+<area shape="poly" title=" " alt="" coords="268,105,254,139,252,158,258,176,277,196,301,211,327,222,353,228,352,233,326,227,298,216,273,200,253,179,246,159,248,138,263,103"/>
+<area shape="poly" title=" " alt="" coords="279,103,291,138,286,140,274,105"/>
+<area shape="poly" title=" " alt="" coords="96,103,124,140,120,143,92,106"/>
+<area shape="poly" title=" " alt="" coords="81,105,70,140,70,159,78,176,95,189,122,201,196,218,279,228,352,232,352,238,279,233,195,223,121,206,93,194,73,179,65,160,65,139,76,103"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Clases</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerialPort.html">SerialPort</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clase para manejar la comunicación con el puerto serial en Linux.  <a href="classSerialPort.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ac0aca0f34a52fbe7527a03517bc3347e" id="r_ac0aca0f34a52fbe7527a03517bc3347e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac0aca0f34a52fbe7527a03517bc3347e">mostrarMenu</a> ()</td></tr>
+<tr class="memdesc:ac0aca0f34a52fbe7527a03517bc3347e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra el menú principal.  <br /></td></tr>
+<tr class="separator:ac0aca0f34a52fbe7527a03517bc3347e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0adb1452b33597bc99cc236d89917303" id="r_a0adb1452b33597bc99cc236d89917303"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0adb1452b33597bc99cc236d89917303">esFloat</a> (const char *valor)</td></tr>
+<tr class="memdesc:a0adb1452b33597bc99cc236d89917303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determina el tipo de dato a partir del string.  <br /></td></tr>
+<tr class="separator:a0adb1452b33597bc99cc236d89917303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función principal del programa.  <br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a0adb1452b33597bc99cc236d89917303" name="a0adb1452b33597bc99cc236d89917303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0adb1452b33597bc99cc236d89917303">&#9670;&#160;</a></span>esFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool esFloat </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>valor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determina el tipo de dato a partir del string. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valor</td><td>String con el valor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si es float, false si es int </dd></dl>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función principal del programa. </p>
+
+</div>
+</div>
+<a id="ac0aca0f34a52fbe7527a03517bc3347e" name="ac0aca0f34a52fbe7527a03517bc3347e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0aca0f34a52fbe7527a03517bc3347e">&#9670;&#160;</a></span>mostrarMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra el menú principal. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

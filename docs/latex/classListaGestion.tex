@@ -1,0 +1,145 @@
+\doxysection{Referencia de la clase Lista\+Gestion}
+\hypertarget{classListaGestion}{}\label{classListaGestion}\index{ListaGestion@{ListaGestion}}
+
+
+Lista enlazada simple para almacenar punteros a \doxylink{classSensorBase}{Sensor\+Base}.  
+
+
+
+
+{\ttfamily \#include $<$Lista\+Gestion.\+h$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classListaGestion_aceaec0bbb46bd0711387802d44e2dbee}{Lista\+Gestion}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classListaGestion_a4b123bfc1cb872963fc3aac4ee797c1f}{\texorpdfstring{$\sim$}{\string~}\+Lista\+Gestion}} ()
+\begin{DoxyCompactList}\small\item\em Destructor -\/ Libera todos los sensores y nodos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaGestion_a84c3d61387b9a11ef84f5c876de7b5e8}{insertar}} (\mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*}sensor)
+\begin{DoxyCompactList}\small\item\em Inserta un sensor al final de la lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classListaGestion_a7d067b6d3ca4eb04f5ace7449868a351}{buscar}} (const char \texorpdfstring{$\ast$}{*}nombre)
+\begin{DoxyCompactList}\small\item\em Busca un sensor por su nombre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaGestion_a356ddce9e9524fe0a52412763a130a87}{procesar\+Todos}} ()
+\begin{DoxyCompactList}\small\item\em Procesa todos los sensores de forma polimórfica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaGestion_a67ca9f4dab44e9d1fd5698ab85768a7f}{imprimir\+Todos}} () const
+\begin{DoxyCompactList}\small\item\em Imprime información de todos los sensores. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classListaGestion_a13223a70420f8d30e0b00f801c55b683}{get\+Tamanio}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el tamaño de la lista. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classListaGestion_a44683d8dd51c4728f92f832288ca2b16}{esta\+Vacia}} () const
+\begin{DoxyCompactList}\small\item\em Verifica si la lista está vacía. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Lista enlazada simple para almacenar punteros a \doxylink{classSensorBase}{Sensor\+Base}. 
+
+Permite gestionar de forma polimórfica diferentes tipos de sensores (\doxylink{classSensorTemperatura}{Sensor\+Temperatura}, \doxylink{classSensorPresion}{Sensor\+Presion}) a través de punteros a la clase base. 
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classListaGestion_aceaec0bbb46bd0711387802d44e2dbee}\label{classListaGestion_aceaec0bbb46bd0711387802d44e2dbee} 
+\index{ListaGestion@{ListaGestion}!ListaGestion@{ListaGestion}}
+\index{ListaGestion@{ListaGestion}!ListaGestion@{ListaGestion}}
+\doxysubsubsection{\texorpdfstring{ListaGestion()}{ListaGestion()}}
+{\footnotesize\ttfamily Lista\+Gestion\+::\+Lista\+Gestion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor por defecto. 
+
+\Hypertarget{classListaGestion_a4b123bfc1cb872963fc3aac4ee797c1f}\label{classListaGestion_a4b123bfc1cb872963fc3aac4ee797c1f} 
+\index{ListaGestion@{ListaGestion}!````~ListaGestion@{\texorpdfstring{$\sim$}{\string~}ListaGestion}}
+\index{````~ListaGestion@{\texorpdfstring{$\sim$}{\string~}ListaGestion}!ListaGestion@{ListaGestion}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ListaGestion()}{\string~ListaGestion()}}
+{\footnotesize\ttfamily Lista\+Gestion\+::\texorpdfstring{$\sim$}{\string~}\+Lista\+Gestion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor -\/ Libera todos los sensores y nodos. 
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classListaGestion_a7d067b6d3ca4eb04f5ace7449868a351}\label{classListaGestion_a7d067b6d3ca4eb04f5ace7449868a351} 
+\index{ListaGestion@{ListaGestion}!buscar@{buscar}}
+\index{buscar@{buscar}!ListaGestion@{ListaGestion}}
+\doxysubsubsection{\texorpdfstring{buscar()}{buscar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*} Lista\+Gestion\+::buscar (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nombre }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Busca un sensor por su nombre. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & Nombre del sensor a buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Puntero al sensor o nullptr si no existe 
+\end{DoxyReturn}
+\Hypertarget{classListaGestion_a44683d8dd51c4728f92f832288ca2b16}\label{classListaGestion_a44683d8dd51c4728f92f832288ca2b16} 
+\index{ListaGestion@{ListaGestion}!estaVacia@{estaVacia}}
+\index{estaVacia@{estaVacia}!ListaGestion@{ListaGestion}}
+\doxysubsubsection{\texorpdfstring{estaVacia()}{estaVacia()}}
+{\footnotesize\ttfamily bool Lista\+Gestion\+::esta\+Vacia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si la lista está vacía. 
+
+\begin{DoxyReturn}{Devuelve}
+true si está vacía 
+\end{DoxyReturn}
+\Hypertarget{classListaGestion_a13223a70420f8d30e0b00f801c55b683}\label{classListaGestion_a13223a70420f8d30e0b00f801c55b683} 
+\index{ListaGestion@{ListaGestion}!getTamanio@{getTamanio}}
+\index{getTamanio@{getTamanio}!ListaGestion@{ListaGestion}}
+\doxysubsubsection{\texorpdfstring{getTamanio()}{getTamanio()}}
+{\footnotesize\ttfamily int Lista\+Gestion\+::get\+Tamanio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el tamaño de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+Número de sensores 
+\end{DoxyReturn}
+\Hypertarget{classListaGestion_a67ca9f4dab44e9d1fd5698ab85768a7f}\label{classListaGestion_a67ca9f4dab44e9d1fd5698ab85768a7f} 
+\index{ListaGestion@{ListaGestion}!imprimirTodos@{imprimirTodos}}
+\index{imprimirTodos@{imprimirTodos}!ListaGestion@{ListaGestion}}
+\doxysubsubsection{\texorpdfstring{imprimirTodos()}{imprimirTodos()}}
+{\footnotesize\ttfamily void Lista\+Gestion\+::imprimir\+Todos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Imprime información de todos los sensores. 
+
+\Hypertarget{classListaGestion_a84c3d61387b9a11ef84f5c876de7b5e8}\label{classListaGestion_a84c3d61387b9a11ef84f5c876de7b5e8} 
+\index{ListaGestion@{ListaGestion}!insertar@{insertar}}
+\index{insertar@{insertar}!ListaGestion@{ListaGestion}}
+\doxysubsubsection{\texorpdfstring{insertar()}{insertar()}}
+{\footnotesize\ttfamily void Lista\+Gestion\+::insertar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*}}]{sensor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserta un sensor al final de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em sensor} & Puntero al sensor a insertar \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classListaGestion_a356ddce9e9524fe0a52412763a130a87}\label{classListaGestion_a356ddce9e9524fe0a52412763a130a87} 
+\index{ListaGestion@{ListaGestion}!procesarTodos@{procesarTodos}}
+\index{procesarTodos@{procesarTodos}!ListaGestion@{ListaGestion}}
+\doxysubsubsection{\texorpdfstring{procesarTodos()}{procesarTodos()}}
+{\footnotesize\ttfamily void Lista\+Gestion\+::procesar\+Todos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Procesa todos los sensores de forma polimórfica. 
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ListaGestion_8h}{Lista\+Gestion.\+h}}\end{DoxyCompactItemize}

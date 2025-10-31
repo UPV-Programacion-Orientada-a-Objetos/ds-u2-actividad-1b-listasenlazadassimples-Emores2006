@@ -1,0 +1,145 @@
+\doxysection{Referencia de la clase Sensor\+Presion}
+\hypertarget{classSensorPresion}{}\label{classSensorPresion}\index{SensorPresion@{SensorPresion}}
+
+
+Clase derivada que maneja lecturas de presión en enteros.  
+
+
+
+
+{\ttfamily \#include $<$Sensor\+Presion.\+h$>$}
+
+
+
+Diagrama de herencia de Sensor\+Presion\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classSensorPresion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de Sensor\+Presion\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classSensorPresion__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSensorPresion_a8f6c054cb4b6f2fd57246f32becd0f85}{Sensor\+Presion}} (const char \texorpdfstring{$\ast$}{*}nom)
+\begin{DoxyCompactList}\small\item\em Constructor del sensor de presión. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSensorPresion_aa82718b7990902c257ebcd0234e1ed46}{\texorpdfstring{$\sim$}{\string~}\+Sensor\+Presion}} ()
+\begin{DoxyCompactList}\small\item\em Destructor que libera la lista interna. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSensorPresion_a842b0bcefce4fbfd1e6ef14ce0fe4117}{agregar\+Lectura}} (const char \texorpdfstring{$\ast$}{*}valor) override
+\begin{DoxyCompactList}\small\item\em Agrega una lectura de presión a la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSensorPresion_aff696aceb5e619529f911311a35d3c76}{procesar\+Lectura}} () override
+\begin{DoxyCompactList}\small\item\em Procesa las lecturas\+: calcula el promedio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSensorPresion_ad5181690dfb24946217e882606f04428}{imprimir\+Info}} () const override
+\begin{DoxyCompactList}\small\item\em Imprime información del sensor y sus lecturas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos heredados de \mbox{\hyperlink{classSensorBase}{Sensor\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSensorBase_aeb2b5bf6fa1bc308a323214a990d85f8}{Sensor\+Base}} (const char \texorpdfstring{$\ast$}{*}nom)
+\begin{DoxyCompactList}\small\item\em Constructor que inicializa el nombre del sensor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSensorBase_acb58cfa69a0635dc3ef5ccb1590dc261}{\texorpdfstring{$\sim$}{\string~}\+Sensor\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destructor virtual para garantizar correcta liberación polimórfica. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSensorBase_ae96d193c623231a955756bceac482f9c}{get\+Nombre}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre del sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Otros miembros heredados}
+\doxysubsection*{Atributos protegidos heredados de \mbox{\hyperlink{classSensorBase}{Sensor\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}} \mbox{[}50\mbox{]}
+\begin{DoxyCompactList}\small\item\em Identificador único del sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase derivada que maneja lecturas de presión en enteros. 
+
+Implementa la funcionalidad específica para sensores de presión, procesando lecturas de tipo int y calculando promedios. 
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classSensorPresion_a8f6c054cb4b6f2fd57246f32becd0f85}\label{classSensorPresion_a8f6c054cb4b6f2fd57246f32becd0f85} 
+\index{SensorPresion@{SensorPresion}!SensorPresion@{SensorPresion}}
+\index{SensorPresion@{SensorPresion}!SensorPresion@{SensorPresion}}
+\doxysubsubsection{\texorpdfstring{SensorPresion()}{SensorPresion()}}
+{\footnotesize\ttfamily Sensor\+Presion\+::\+Sensor\+Presion (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor del sensor de presión. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nom} & Nombre identificador del sensor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSensorPresion_aa82718b7990902c257ebcd0234e1ed46}\label{classSensorPresion_aa82718b7990902c257ebcd0234e1ed46} 
+\index{SensorPresion@{SensorPresion}!````~SensorPresion@{\texorpdfstring{$\sim$}{\string~}SensorPresion}}
+\index{````~SensorPresion@{\texorpdfstring{$\sim$}{\string~}SensorPresion}!SensorPresion@{SensorPresion}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SensorPresion()}{\string~SensorPresion()}}
+{\footnotesize\ttfamily Sensor\+Presion\+::\texorpdfstring{$\sim$}{\string~}\+Sensor\+Presion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor que libera la lista interna. 
+
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classSensorPresion_a842b0bcefce4fbfd1e6ef14ce0fe4117}\label{classSensorPresion_a842b0bcefce4fbfd1e6ef14ce0fe4117} 
+\index{SensorPresion@{SensorPresion}!agregarLectura@{agregarLectura}}
+\index{agregarLectura@{agregarLectura}!SensorPresion@{SensorPresion}}
+\doxysubsubsection{\texorpdfstring{agregarLectura()}{agregarLectura()}}
+{\footnotesize\ttfamily void Sensor\+Presion\+::agregar\+Lectura (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Agrega una lectura de presión a la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em valor} & String con el valor de presión \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \mbox{\hyperlink{classSensorBase_adfcce9176e571b524e9cd03e507e94d4}{Sensor\+Base}}.
+
+\Hypertarget{classSensorPresion_ad5181690dfb24946217e882606f04428}\label{classSensorPresion_ad5181690dfb24946217e882606f04428} 
+\index{SensorPresion@{SensorPresion}!imprimirInfo@{imprimirInfo}}
+\index{imprimirInfo@{imprimirInfo}!SensorPresion@{SensorPresion}}
+\doxysubsubsection{\texorpdfstring{imprimirInfo()}{imprimirInfo()}}
+{\footnotesize\ttfamily void Sensor\+Presion\+::imprimir\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Imprime información del sensor y sus lecturas. 
+
+
+
+Implementa \mbox{\hyperlink{classSensorBase_a7cf3aeb12b330c500e2a5136fa020eec}{Sensor\+Base}}.
+
+\Hypertarget{classSensorPresion_aff696aceb5e619529f911311a35d3c76}\label{classSensorPresion_aff696aceb5e619529f911311a35d3c76} 
+\index{SensorPresion@{SensorPresion}!procesarLectura@{procesarLectura}}
+\index{procesarLectura@{procesarLectura}!SensorPresion@{SensorPresion}}
+\doxysubsubsection{\texorpdfstring{procesarLectura()}{procesarLectura()}}
+{\footnotesize\ttfamily void Sensor\+Presion\+::procesar\+Lectura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Procesa las lecturas\+: calcula el promedio. 
+
+Implementación específica para presión que calcula el promedio de todas las lecturas almacenadas. 
+
+Implementa \mbox{\hyperlink{classSensorBase_a7fbc0a5b444f7d16cd60ba873b8ec8e4}{Sensor\+Base}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SensorPresion_8h}{Sensor\+Presion.\+h}}\end{DoxyCompactItemize}

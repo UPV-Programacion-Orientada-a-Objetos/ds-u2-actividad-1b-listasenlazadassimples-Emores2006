@@ -1,0 +1,22 @@
+\chapter{Sistema IoT de Monitoreo Polimórfico}
+\hypertarget{index}{}\label{index}\index{Sistema IoT de Monitoreo Polimórfico@{Sistema IoT de Monitoreo Polimórfico}}
+Programa principal del Sistema de Gestión Polimórfica de Sensores IoT.
+
+Programa principal del Sistema de Gestión Polimórfica de Sensores IoT
+\begin{DoxyItemize}
+\item Este programa implementa un sistema completo de gestión de sensores que\+:
+\item Gestiona sensores de forma polimórfica utilizando la clase base \doxylink{classSensorBase}{Sensor\+Base}.
+\item Utiliza listas enlazadas genéricas (Lista\+Sensor$<$\+T$>$) para almacenar lecturas.
+\item Implementa una gestión de memoria cuidadosa (Regla de los Tres/\+Cinco) y polimorfismo.
+\end{DoxyItemize}\hypertarget{index_Secciones_Proyecto}{}\doxysection{\texorpdfstring{Estructura del Proyecto\+:}{Estructura del Proyecto:}}\label{index_Secciones_Proyecto}
+Para ver el detalle de las clases, revisa el menú superior "{}\+Clases"{}. \begin{DoxyItemize}
+\item \doxylink{SensorBase_8h}{Sensor\+Base.\+h}\+: Interfaz abstracta para todos los sensores. \item \doxylink{SensorTemperatura_8h}{Sensor\+Temperatura.\+h}\+: Implementación para datos FLOAT. \item \doxylink{SensorPresion_8h}{Sensor\+Presion.\+h}\+: Implementación para datos INT. \item \doxylink{ListaSensor_8h}{Lista\+Sensor.\+h}\+: Contenedor genérico (Lista Enlazada) para lecturas. \item \doxylink{ListaGestion_8h}{Lista\+Gestion.\+h}\+: Contenedor no genérico para punteros a \doxylink{classSensorBase}{Sensor\+Base} (Polimorfismo).
+\begin{DoxyItemize}
+\item \begin{DoxyAuthor}{Autor}
+Eliezer Mores Oyervides 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+2025 
+\end{DoxyDate}
+
+\end{DoxyItemize}\end{DoxyItemize}
